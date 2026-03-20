@@ -1,0 +1,97 @@
+body {
+    position: relative;
+    background-color: black;
+    color: #198bd2;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 36px;
+    position: relative;
+    z-index: 1000;       
+    mix-blend-mode: normal;
+    isolation: isolate;   
+}
+
+h1:hover {
+    color: #abc1ef;
+    transition: 0.3s ease; 
+}
+
+p {
+    position: absolute;
+    top: 150px;          /* adjust to sit just above the button */
+    right: 50px;
+    max-width: 400px;
+    font-size: 15px;
+    line-height: 1.4;
+    padding: 8px 12px;
+    border-radius: 20px;
+    background-color: #198bd2;
+    color: white;
+    z-index: 1000;
+    isolation: isolate;
+}
+p:hover {
+    background-color: #0E2F73;
+    color: #198bd2;
+    transform: scale(1.02); 
+    transition: 0.3s ease; 
+
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.project {
+    position: absolute;
+    top: 600px;    
+    right: 100px;   
+    z-index: 1000;        
+    isolation: isolate;
+}
+
+#container {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}
+
+
+.project-title {
+    border-radius: 30px;
+    font-size: 30px;
+    padding: 0.6em 1.2em;
+    background-color:#198bd2;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    color:  #0E2F73;              
+    transition: 0.3s ease; 
+    text-align: center;
+
+    /* makes text inside button border centre */
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+}
+
+.project-title:hover {
+    background-color: #0E2F73;
+    color: #198bd2;
+    transform: scale(1.02); 
+
+}
+
+#container-two {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;        /* on top of everything */
+    pointer-events: none; /* lets clicks pass through to elements below */
+}
+#container-two canvas {
+    mix-blend-mode: screen; /* only brightens dark areas, ignores light/coloured ones */
+}
